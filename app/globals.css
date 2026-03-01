@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f2ed;
+  --foreground: #0f0e0d;
+  --card: #f5f2ed;
+  --card-foreground: #0f0e0d;
+  --popover: #f5f2ed;
+  --popover-foreground: #0f0e0d;
+  --primary: #0f0e0d;
+  --primary-foreground: #f5f2ed;
+  --secondary: #e8e4dd;
+  --secondary-foreground: #0f0e0d;
+  --muted: #e8e4dd;
+  --muted-foreground: #6b6560;
+  --accent: #c8441a;
+  --accent-foreground: #f5f2ed;
+  --destructive: #c8441a;
+  --destructive-foreground: #f5f2ed;
+  --border: #d4d0c9;
+  --input: #d4d0c9;
+  --ring: #c8441a;
+  --radius: 0rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-dm-mono), monospace;
+  --font-serif: var(--font-playfair), serif;
+  --font-mono: var(--font-dm-mono), monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom cursor for image hover */
+.cursor-circle {
+  cursor: none;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Underline draw effect */
+.underline-draw {
+  position: relative;
+}
+.underline-draw::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.underline-draw:hover::after {
+  width: 100%;
+}
+
+/* Active filter underline */
+.filter-active::after {
+  width: 100%;
+}
