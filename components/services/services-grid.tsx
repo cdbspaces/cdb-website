@@ -5,45 +5,45 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const services = [
   {
     number: "01",
-    title: "Architecture",
+    title: "Workplace Design & Strategy",
     description:
-      "From urban masterplans to individual buildings, we design structures that respond to their context and serve their communities. Our work spans institutional, residential, hospitality, and workplace projects. We approach each brief with rigorous analysis, creative thinking, and a deep commitment to sustainable design principles.",
-    applications: ["New Buildings", "Adaptive Reuse", "Urban Planning", "Master Planning"],
+      "We design corporate offices that support productivity, collaboration, and wellbeing. Our approach combines space programming, furniture planning, and spatial design to create flexible, efficient work environments. We understand the modern workplace—from open collaboration zones to focused work areas—and design spaces that reflect your organizational culture.",
+    applications: ["Office Planning", "Fit-out Design", "Furniture Selection", "Space Programming"],
   },
   {
     number: "02",
-    title: "Interior Design",
+    title: "Hospitality Interiors",
     description:
-      "We create interior environments that are as thoughtfully designed as the buildings that contain them. Our interiors philosophy emphasizes honest materials, natural light, spatial generosity, and human scale. We design everything from the overall spatial organization to bespoke furniture pieces and lighting solutions.",
-    applications: ["Residential Interiors", "Commercial Spaces", "Hospitality Design", "Workplace Interiors"],
+      "From boutique hotels to upscale restaurants and bars, we create hospitality spaces that deliver exceptional guest experiences. We focus on material authenticity, atmospheric lighting, functional layouts, and branded environments that tell your story and engage your guests from arrival to departure.",
+    applications: ["Hotel Design", "Restaurant Design", "Bar & Lounge", "Guest Suites"],
   },
   {
     number: "03",
-    title: "Workplace Strategy",
+    title: "Branded Environments",
     description:
-      "The modern workplace demands a new approach. We combine research, user engagement, and design thinking to create workplace environments that support both individual focus and collaborative work. Our strategies address flexibility, wellbeing, sustainability, and organizational culture.",
-    applications: ["Workplace Planning", "Space Programming", "Fit-out Design", "Change Management"],
+      "We design interior spaces that embody your brand identity. Whether corporate headquarters, boutique hotels, or restaurant concepts, we translate your brand values into cohesive spatial experiences. Our work ensures consistency across materials, finishes, furniture, and lighting.",
+    applications: ["Corporate Branding", "Experiential Design", "Concept Rollout", "Brand Guidelines"],
   },
   {
     number: "04",
-    title: "Heritage & Restoration",
+    title: "Interior Architecture",
     description:
-      "Working with heritage buildings demands sensitivity, expertise, and respect for history. We specialize in thoughtful restoration projects that honour original character while meeting contemporary needs. Each intervention is designed to create a dialogue between old and new.",
-    applications: ["Heritage Assessment", "Restoration Design", "Adaptive Reuse", "Conservation Planning"],
+      "We provide detailed interior architectural services including custom layouts, partition systems, built-in cabinetry, and spatial organization. Our designs optimize functionality while maintaining visual sophistication and material integrity.",
+    applications: ["Custom Millwork", "Space Planning", "Detailed Design", "Material Specification"],
   },
   {
     number: "05",
-    title: "Landscape Design",
+    title: "Materials & Finishes Selection",
     description:
-      "Landscape is integral to great architecture. We design outdoor spaces that extend living areas, improve microclimate, support biodiversity, and create memorable experiences. Our work ranges from intimate gardens to large-scale public realm projects.",
-    applications: ["Garden Design", "Public Spaces", "Outdoor Amenities", "Ecological Planting"],
+      "We curate and specify premium materials, finishes, and furnishings that align with your project vision. Our sourcing expertise spans sustainable options, artisanal products, and high-performance materials suited to commercial environments.",
+    applications: ["Finishes Selection", "Procurement", "Vendor Coordination", "Sustainability Focus"],
   },
   {
     number: "06",
     title: "Lighting Design",
     description:
-      "Light shapes how we experience space. We design layered lighting schemes that support the function of a space while creating atmosphere and drama. Our lighting design integrates natural light strategies with carefully considered artificial lighting.",
-    applications: ["Architectural Lighting", "Interior Lighting", "Landscape Lighting", "Facade Lighting"],
+      "Thoughtful lighting design defines atmosphere and functionality. We create layered lighting schemes that enhance spatial experience, support task performance, and create the right ambiance for your space—whether energizing offices, intimate restaurants, or welcoming lobbies.",
+    applications: ["Ambient Lighting", "Task Lighting", "Accent Lighting", "Controls & Automation"],
   },
 ]
 
@@ -53,10 +53,10 @@ export function ServicesGrid() {
       <div className="max-w-5xl mb-16 md:mb-24">
         <ScrollReveal>
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
-            Core Services
+            Services
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground text-balance">
-            A full spectrum of design and delivery expertise.
+            Expert design for corporate and hospitality spaces.
           </h2>
         </ScrollReveal>
       </div>

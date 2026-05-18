@@ -15,7 +15,7 @@ export function ServicesHero() {
           What We Offer
         </p>
         <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl italic leading-snug text-foreground text-balance">
-          From concept to completion, we provide comprehensive design and delivery services.
+          Designing corporate and hospitality spaces that inspire, engage, and perform.
         </h1>
       </motion.div>
 
@@ -26,7 +26,7 @@ export function ServicesHero() {
         className="mt-16 max-w-3xl"
       >
         <p className="font-mono text-sm leading-relaxed text-foreground/70">
-          Collaborate Design and Build offers a full spectrum of architectural and design services tailored to meet the unique needs of each project. Our multidisciplinary team brings deep expertise across architecture, interior design, landscape design, heritage restoration, workplace strategy, and lighting design. Whether you're embarking on a new building, reimagining an existing space, or restoring a heritage structure, we partner with you to create environments that are both beautiful and purposeful.
+          We specialize in creating exceptional interior environments for corporate offices and hospitality venues. Our expertise spans workplace strategy, office design, hotel and restaurant interiors, and branded hospitality spaces. We combine thoughtful spatial planning, materiality, and guest/employee experience to create environments that reflect your brand, support your operations, and leave a lasting impression.
         </p>
       </motion.div>
     </section>

@@ -5,7 +5,7 @@ import { ProcessFlow } from "@/components/services/process-flow"
 
 export const metadata: Metadata = {
   title: "Services | Collaborate Design and Build",
-  description: "Architecture, interior design, workplace strategy, and heritage restoration services. From concept through completion.",
+  description: "Corporate office design, workplace strategy, hospitality interiors, and branded environments. Expert interior design for offices and hotels.",
 }
 
 export default function ServicesPage() {
