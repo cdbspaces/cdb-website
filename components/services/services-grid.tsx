@@ -19,27 +19,13 @@ const services = [
   },
   {
     number: "03",
-    title: "Branded Environments",
-    description:
-      "We design interior spaces that embody your brand identity. Whether corporate headquarters, boutique hotels, or restaurant concepts, we translate your brand values into cohesive spatial experiences. Our work ensures consistency across materials, finishes, furniture, and lighting.",
-    applications: ["Corporate Branding", "Experiential Design", "Concept Rollout", "Brand Guidelines"],
-  },
-  {
-    number: "04",
     title: "Interior Architecture",
     description:
       "We provide detailed interior architectural services including custom layouts, partition systems, built-in cabinetry, and spatial organization. Our designs optimize functionality while maintaining visual sophistication and material integrity.",
     applications: ["Custom Millwork", "Space Planning", "Detailed Design", "Material Specification"],
   },
   {
-    number: "05",
-    title: "Materials & Finishes Selection",
-    description:
-      "We curate and specify premium materials, finishes, and furnishings that align with your project vision. Our sourcing expertise spans sustainable options, artisanal products, and high-performance materials suited to commercial environments.",
-    applications: ["Finishes Selection", "Procurement", "Vendor Coordination", "Sustainability Focus"],
-  },
-  {
-    number: "06",
+    number: "04",
     title: "Lighting Design",
     description:
       "Thoughtful lighting design defines atmosphere and functionality. We create layered lighting schemes that enhance spatial experience, support task performance, and create the right ambiance for your space—whether energizing offices, intimate restaurants, or welcoming lobbies.",
