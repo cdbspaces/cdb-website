@@ -248,6 +248,4 @@ export const milestones: Milestone[] = [
 export const navLinks = [
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
-  { label: "Ideas", href: "/#ideas" },
-  { label: "Contact", href: "/#contact" },
 ]

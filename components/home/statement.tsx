@@ -2,7 +2,9 @@
 
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-export function Statement() {
+export function Statement({ settings }: { settings?: any }) {
+  const commitmentText = settings?.ourCommitment || "Every building we design must give more than it takes. Sustainability is not an add-on; it is the starting point of every conversation."
+
   return (
     <section className="bg-foreground py-24 md:py-36 px-6 md:px-12">
       <ScrollReveal className="max-w-5xl mx-auto">
@@ -10,7 +12,7 @@ export function Statement() {
           Our Commitment
         </p>
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-snug text-background text-balance">
-          {"Every building we design must give more than it takes. Sustainability is not an add-on; it is the starting point of every conversation."}
+          {commitmentText}
         </h2>
       </ScrollReveal>
     </section>

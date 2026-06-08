@@ -173,5 +173,12 @@ export const siteSettings = {
                 },
             ],
         },
+        {
+            name: 'ourCommitment',
+            title: 'Our Commitment',
+            description: 'The commitment statement displayed on the homepage',
+            type: 'text',
+            rows: 3,
+        },
     ],
 }

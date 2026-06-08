@@ -18,20 +18,32 @@ export function Intro({ settings }: { settings?: any }) {
 
         {/* Right: philosophy */}
         <ScrollReveal className="md:w-2/5" delay={0.2}>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-4">
+          <p
+            className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-4"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             {settings?.philosophyTitle || "Our Philosophy"}
           </p>
           <div className="space-y-4">
-            <p className="font-mono text-sm leading-relaxed text-foreground/80">
+            <p
+              className="font-sans text-base leading-relaxed text-foreground/80"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
               {settings?.philosophyText1 || "Collaborate Design and Build is an international design practice working across architecture, interiors, and strategy. Founded in 2005, we bring together diverse perspectives to create spaces that are both deeply considered and effortlessly functional."}
             </p>
             {settings?.philosophyText2 && (
-              <p className="font-mono text-sm leading-relaxed text-foreground/80">
+              <p
+                className="font-sans text-base leading-relaxed text-foreground/80"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
                 {settings.philosophyText2}
               </p>
             )}
             {!settings?.philosophyText2 && !settings?.philosophyText1 && (
-              <p className="font-mono text-sm leading-relaxed text-foreground/80">
+              <p
+                className="font-sans text-base leading-relaxed text-foreground/80"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
                 Every project begins with listening. We immerse ourselves in the context, culture, and ambitions of each client to deliver design solutions that feel inevitable rather than imposed.
               </p>
             )}

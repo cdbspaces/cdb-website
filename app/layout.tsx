@@ -1,11 +1,16 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, DM_Mono } from 'next/font/google'
+import { Inter, Playfair_Display, DM_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import './globals.css'
 import { client } from '@/lib/sanity'
 import { getSiteSettings } from '@/lib/queries'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 const _playfair = Playfair_Display({
   subsets: ['latin'],
@@ -53,8 +58,8 @@ export default async function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${_playfair.variable} ${_dmMono.variable}`}>
-      <body className="font-mono antialiased">
+    <html lang="en" className={`${inter.variable} ${_playfair.variable} ${_dmMono.variable}`}>
+      <body className="antialiased">
         <Navigation />
         <main>{children}</main>
         <Footer />

@@ -36,8 +36,11 @@ export function NavigationClient({ settings }: { settings?: any }) {
         }
     }, [isMobileOpen])
 
-    const isProjectPage = pathname.startsWith('/projects/')
-    const isDarkNav = isProjectPage || isScrolled
+    const isHome = pathname === "/"
+
+    // Only use transparent header with light text on the Home page when not scrolled
+    const useTransparentHeader = isHome && !isScrolled
+    const isDarkNav = !useTransparentHeader
 
     const selectedLogo = settings?.logos?.find((l: any) =>
         isDarkNav ? l.theme === 'dark' : l.theme === 'light'
@@ -46,10 +49,11 @@ export function NavigationClient({ settings }: { settings?: any }) {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                    ? "bg-background/95 backdrop-blur-sm border-b border-border py-4"
-                    : "bg-transparent py-6"
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${useTransparentHeader
+                    ? "bg-transparent py-6"
+                    : "bg-background/95 backdrop-blur-sm border-b border-border py-4"
                     }`}
+                style={!useTransparentHeader ? { backgroundColor: '#dcd7cc' } : {}}
             >
                 <nav className={`flex items-center justify-between px-6 md:px-12 transition-colors duration-500 ${isDarkNav ? "text-foreground" : "text-background"
                     }`}>
@@ -86,8 +90,8 @@ export function NavigationClient({ settings }: { settings?: any }) {
                         <Link
                             href="/#contact"
                             className={`font-mono text-xs uppercase tracking-[0.2em] px-5 py-2 border transition-all duration-500 ${isDarkNav
-                                    ? "text-foreground border-foreground hover:bg-foreground hover:text-background"
-                                    : "text-background border-background hover:bg-background hover:text-foreground"
+                                ? "text-foreground border-foreground hover:bg-foreground hover:text-background"
+                                : "text-background border-background hover:bg-background hover:text-foreground"
                                 }`}
                         >
                             Get in Touch

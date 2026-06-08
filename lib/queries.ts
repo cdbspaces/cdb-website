@@ -49,6 +49,7 @@ export const getSiteSettings = groq`
     offices,
     linkedIn,
     instagram,
+    ourCommitment,
     heroSlideshow[] | order(order asc) {
       image,
       headline,
