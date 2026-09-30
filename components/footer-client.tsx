@@ -1,9 +1,15 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { navLinks, offices as defaultOffices } from "@/lib/data"
 
 export function FooterClient({ settings }: { settings?: any }) {
+    const pathname = usePathname()
+    if (pathname?.startsWith("/studio")) {
+        return null
+    }
+
     const offices = (settings?.offices && settings.offices.length > 0) ? settings.offices : defaultOffices
 
     return (

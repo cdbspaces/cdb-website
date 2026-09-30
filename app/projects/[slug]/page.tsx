@@ -38,7 +38,7 @@ export default async function ProjectPage({
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-background/80 mb-4">
               {project.category}
             </p>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-background max-w-4xl text-balance">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl text-background max-w-4xl text-balance">
               {project.title}
             </h1>
           </ScrollReveal>

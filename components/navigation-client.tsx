@@ -13,6 +13,10 @@ export function NavigationClient({ settings }: { settings?: any }) {
     const [isMobileOpen, setIsMobileOpen] = useState(false)
     const pathname = usePathname()
 
+    if (pathname?.startsWith("/studio")) {
+        return null
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 80)
