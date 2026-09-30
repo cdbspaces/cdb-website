@@ -95,28 +95,55 @@ export const siteSettings = {
         },
         {
             name: 'offices',
-            title: 'Offices',
+            title: 'Offices / Studio Branches',
             type: 'array',
             of: [
                 {
                     type: 'object',
+                    title: 'Branch Office',
                     fields: [
                         {
                             name: 'city',
-                            title: 'City',
+                            title: 'City / Branch Name',
                             type: 'string',
                         },
                         {
                             name: 'region',
-                            title: 'Region',
+                            title: 'Region / State',
                             type: 'string',
                         },
                         {
                             name: 'address',
-                            title: 'Address',
+                            title: 'Branch Address',
                             type: 'text',
+                            rows: 3,
+                        },
+                        {
+                            name: 'phone',
+                            title: 'Branch Phone Number',
+                            description: 'Direct phone number for this specific branch',
+                            type: 'string',
+                        },
+                        {
+                            name: 'email',
+                            title: 'Branch Email ID',
+                            description: 'Direct email address for this specific branch',
+                            type: 'string',
                         },
                     ],
+                    preview: {
+                        select: {
+                            title: 'city',
+                            subtitle: 'email',
+                        },
+                        prepare(selection: any) {
+                            const { title, subtitle } = selection
+                            return {
+                                title: title || 'Branch Office',
+                                subtitle: subtitle || 'No email set',
+                            }
+                        },
+                    },
                 },
             ],
         },

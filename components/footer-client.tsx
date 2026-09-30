@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { navLinks } from "@/lib/data"
+import { navLinks, offices as defaultOffices } from "@/lib/data"
 
 export function FooterClient({ settings }: { settings?: any }) {
-    const offices = settings?.offices || []
+    const offices = (settings?.offices && settings.offices.length > 0) ? settings.offices : defaultOffices
 
     return (
         <footer id="contact" className="bg-secondary text-foreground px-6 md:px-12 pt-20 pb-8" style={{ backgroundColor: '#dcd7cc' }}>
@@ -31,21 +31,31 @@ export function FooterClient({ settings }: { settings?: any }) {
 
                 {/* Right: offices */}
                 <div className="lg:w-1/3 grid grid-cols-1 sm:grid-cols-2 gap-12">
-                    {offices.map((office: any, index: number) => (
-                        <div key={index}>
-                            <p className="font-mono text-sm uppercase tracking-[0.15em] text-foreground mb-1">
-                                {office.city}
-                            </p>
-                            <p className="font-mono text-xs text-foreground/60 whitespace-pre-line leading-relaxed">
-                                {office.address}
-                            </p>
-                            {office.phone && (
-                                <p className="font-mono text-xs text-foreground/60 mt-1">
-                                    {office.phone}
+                    {offices.map((office: any, index: number) => {
+                        const phone = office.phone || settings?.contactPhone
+                        const email = office.email || settings?.contactEmail
+
+                        return (
+                            <div key={index}>
+                                <p className="font-mono text-sm uppercase tracking-[0.15em] text-foreground mb-1">
+                                    {office.city}
                                 </p>
-                            )}
-                        </div>
-                    ))}
+                                <p className="font-mono text-xs text-foreground/60 whitespace-pre-line leading-relaxed">
+                                    {office.address}
+                                </p>
+                                {phone && (
+                                    <p className="font-mono text-xs text-foreground/60 mt-1">
+                                        <a href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:text-foreground transition-colors">{phone}</a>
+                                    </p>
+                                )}
+                                {email && (
+                                    <p className="font-mono text-xs text-foreground/60 mt-0.5">
+                                        <a href={`mailto:${email}`} className="hover:text-foreground transition-colors">{email}</a>
+                                    </p>
+                                )}
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
 
